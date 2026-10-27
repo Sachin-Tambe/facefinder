@@ -1,0 +1,14 @@
+services:
+  # Offline/local fallback ONLY. Production uses Neon (NEON_DATABASE_URL in .env);
+  # when that is set, this container is unused — no Docker needed at all with Neon + Upstash.
+  postgres:
+    image: postgres:16-alpine
+    environment: { POSTGRES_USER: facefinder, POSTGRES_PASSWORD: facefinder, POSTGRES_DB: facefinder }
+    ports: ["5433:5432"]
+    volumes: [pg:/var/lib/postgresql/data]
+  # Offline/local Redis fallback ONLY. Production uses Upstash (UPSTASH_REDIS_URL in .env);
+  # when that is set, this container is unused — start only Postgres with: docker compose up -d postgres
+  redis:
+    image: redis:7-alpine
+    ports: ["6379:6379"]
+volumes: { pg: {} }

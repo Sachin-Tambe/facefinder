@@ -1,0 +1,7 @@
+.env
+node_modules/
+.next/
+backend/api
+backend/worker
+*.log
+.env.local

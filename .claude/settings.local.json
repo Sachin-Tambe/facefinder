@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(go mod *)",
+      "Bash(go vet *)",
+      "Bash(go test *)",
+      "Bash(go build *)",
+      "Bash(npm install *)",
+      "Bash(npx tsc *)",
+      "Bash(npm run *)",
+      "Bash(docker --version)",
+      "Bash(docker compose *)",
+      "Bash(sed -i 's/RekognitionCollectionId/RekognitionCollectionID/' /tmp/e2e.py)",
+      "Bash(python3 /tmp/e2e.py)",
+      "Bash(pkill -f ff-api)",
+      "Bash(pkill -f ff-worker)",
+      "Bash(kill 73723)",
+      "Bash(DATABASE_URL='postgres://facefinder:facefinder@localhost:5433/facefinder?sslmode=disable' /tmp/ff-api *)",
+      "Bash(DATABASE_URL='postgres://facefinder:facefinder@localhost:5433/facefinder?sslmode=disable' /tmp/ff-worker *)",
+      "Bash(python3 -)"
+    ]
+  }
+}
